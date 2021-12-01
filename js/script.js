@@ -46,7 +46,7 @@ jQuery(".js-header_menu__link").on('click', event => {
   const targetPosition = jQuery(targetLink).offset().top - headerHight;
   smoothScroll(targetPosition);
   jQuery(".js-header_menu__link").removeClass("is-active");
-  target.addClass("is-active");
+  eventTarget.addClass("is-active");
 })
 jQuery(".js-toTop").on('click', event => {
   event.preventDefault();
