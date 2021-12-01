@@ -1861,3 +1861,27 @@ body {
 .footer__copy {
   font-family: "Lato", sans-serif;
 }
+
+.section_inner {
+  width: 900px;
+  margin: 0 auto;
+  padding: 100px 0 120px;
+  background: #fff;
+}
+
+.question__accordion {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion__header {
+  background: #3f51b5;
+}
+
+.accordion__headerText {
+  color: #fff;
+}

@@ -1787,3 +1787,24 @@ body {
 .footer__copy {
 	font-family: $font-family-english;
 }
+
+.section_inner {
+	width: 900px;
+	margin: 0 auto;
+	padding: 100px 0 120px;
+	background: $color-background-base;
+}
+
+.question__accordion {
+	width: 100%;
+	margin-top: 80px;
+}
+.accordion {
+	width: 100%;
+}
+.accordion__header {
+	background: $color-main;
+}
+.accordion__headerText {
+	color: $color-background-base;
+}
