@@ -52,3 +52,14 @@ jQuery(".js-toTop").on('click', event => {
   event.preventDefault();
   smoothScroll(0);
 })
+
+jQuery(".js-accordion__header").on("click", function() {
+  const $targetContent = jQuery(this).next();
+  if($targetContent.is(":visible")){
+    jQuery(this).removeClass("accordion__header--open");
+    $targetContent.stop().slideUp();
+  }else{
+    jQuery(this).addClass("accordion__header--open");
+    $targetContent.stop().slideDown();
+  }
+})

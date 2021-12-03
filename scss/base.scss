@@ -5,7 +5,7 @@
 // 色
 $color-main: #3f51b5; // ベース色
 $color-active: #e81919; // アクティブ色
-$color-background-base: #fff; // 背景色
+$color-white: #fff; // 背景色
 $color-text-base: #333; // テキスト色
 $hover-opacity: 0.6; // 透過度
 
@@ -78,7 +78,7 @@ body {
 	line-height: $line-height-base;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: $color-background-base;
+	background: $color-white;
 	overflow-x: hidden;
 	overflow-wrap: break-word;
 	padding-top: $header-height-pc;
@@ -1792,7 +1792,7 @@ body {
 	width: 900px;
 	margin: 0 auto;
 	padding: 100px 0 120px;
-	background: $color-background-base;
+	background: $color-white;
 }
 
 .question__accordion {
@@ -1801,10 +1801,55 @@ body {
 }
 .accordion {
 	width: 100%;
+	&:not(:first-of-type){
+		margin-top: 24px;
+	}
 }
 .accordion__header {
-	background: $color-main;
+	background: right 14px center / 14px 14px no-repeat url("../img/icon-accordion_plus.svg") $color-main;
+	padding: 12px 28px 12px 20px;
+}
+.accordion__header--open {
+	background: right 14px center / 14px 14px no-repeat url("../img/icon-accordion_minus.svg") $color-main;
+}
+.accordion__headerQuestionIcon {
+	display: inline-block;
+	color: $color-white;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+	margin-right: 25px;
 }
 .accordion__headerText {
-	color: $color-background-base;
+	display: inline-block;
+	color: $color-white;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+}
+.accordion__content {
+	display: none;
+	box-sizing: border-box;
+	padding: 16px 30px 16px 20px;
+	border: 1px solid $color-main;
+}
+.accordion__content_inner {
+	display: flex;
+}
+.accordion__contentAnswerIcon {
+	display: inline-block;
+	color: $color-main;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+	line-height: calc(24/16);
+	margin-right: 25px;
+}
+.accordion__contentText {
+	display: inline-block;
+	color: $color-main;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: calc(24/16);
+	margin: 0;
 }
