@@ -1,13 +1,11 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
-
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -24,9 +22,9 @@ const smoothScroll = (position) => {
 
 new WOW().init();
 
-jQuery('.drawer_icon').on('click', function (e) {
-  e.preventDefault();
-  jQuery(this).toggleClass('is-active');
+jQuery('.drawer_icon').on('click', (event) => {
+  event.preventDefault();
+  jQuery(event.currentTarget).toggleClass('is-active');
   jQuery('.drawer_menu').toggleClass('is-active');
   jQuery('.drawer_background').toggleClass('is-active');
 })
@@ -53,13 +51,13 @@ jQuery(".js-toTop").on('click', event => {
   smoothScroll(0);
 })
 
-jQuery(".js-accordion__header").on("click", function() {
-  const $targetContent = jQuery(this).next();
+jQuery(".js-accordion__header").on("click", (event) => {
+  const $targetContent = jQuery(event.currentTarget).next();
   if($targetContent.is(":visible")){
-    jQuery(this).removeClass("accordion__header--open");
+    jQuery(event.currentTarget).removeClass("accordion__header--open");
     $targetContent.stop().slideUp();
-  }else{
-    jQuery(this).addClass("accordion__header--open");
+  } else {
+    jQuery(event.currentTarget).addClass("accordion__header--open");
     $targetContent.stop().slideDown();
   }
 })
