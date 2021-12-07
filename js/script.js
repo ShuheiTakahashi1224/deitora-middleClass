@@ -19,7 +19,6 @@ const smoothScroll = (position) => {
   }, 500)
 }
 
-
 new WOW().init();
 
 jQuery('.drawer_icon').on('click', (event) => {
@@ -61,3 +60,13 @@ jQuery(".js-accordion__header").on("click", (event) => {
     $targetContent.stop().slideDown();
   }
 })
+
+jQuery(".js-contact__privacyLink").on("click", (event) => {
+  event.preventDefault();
+  jQuery(".js-privacy_modal").show();
+});
+
+jQuery(".js-privacy_modal__closeButton").on("click", (event) => {
+  event.preventDefault();
+  jQuery(".js-privacy_modal").hide();
+});
